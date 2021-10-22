@@ -82,3 +82,5 @@ DB_PORT=5432
 
 ## Статус workflow
 ![yamdb workflow](https://github.com/LasBazza/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
+**_Проект доступен по [ссылке](http://178.154.230.3/)_**
