@@ -27,7 +27,7 @@ servers:
 
 tags:
   - name: REVIEWS
-    description: Отзывы
+    description: Отзывы на произведения
   - name: COMMENTS
     description: Комментарии к отзывам
   - name: AUTH
@@ -37,9 +37,9 @@ tags:
   - name: CATEGORIES
     description: Категории (типы) произведений
   - name: GENRES
-    description: Категории жанров
+    description: Жанры
   - name: TITLES
-    description: Произведения, к которым пишут отзывы (определённый фильм, книга или песенка).
+    description: Произведения
 
 paths:
   /titles/{title_id}/reviews/:
@@ -928,6 +928,11 @@ paths:
         Создать жанр.
 
         Права доступа: **Администратор**.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Genre'
       responses:
         200:
           description: Список жанров
@@ -1070,6 +1075,7 @@ components:
       type: object
       required:
         - name
+        - slug
       properties:
         name:
           type: string

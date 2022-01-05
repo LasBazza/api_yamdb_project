@@ -108,7 +108,7 @@ def send_confirmation_code(request):
     if User.objects.filter(email=email).exists():
         user = User.objects.get(email=email)
         message = ('This email is already registered. '
-                   'Confirmation code has sent again.')
+                   'Confirmation code has sent.')
     else:
         user = User.objects.create(email=email, username=email)
         message = 'Confirmation_code has sent'

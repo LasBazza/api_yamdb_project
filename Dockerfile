@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8
 
 WORKDIR /code
 
@@ -8,4 +8,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
+RUN chmod +x /code/script.sh
+
+ENTRYPOINT ["/code/script.sh"]
