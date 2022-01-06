@@ -15,7 +15,7 @@ API для сервиса YaMDb.
 * Отзывы 
 * Коментарии к отзывам
 
-## Запуск проекта и регистрация
+## Запуск проекта
 
 **1. Склонировать резпозиторий**
 ```
@@ -47,7 +47,7 @@ docker-compose up
 1. Пользователь отправляет ```POST``` запрос с параметром ```email``` на ```http://127.0.0.1/api/v1/auth/email/```.
 2. Затем сервис должен отправить письмо с кодом подтверждения на адрес email. Но в действительности письмо сохраняется в контейнере с проектом в папке ```sent_emails/```. 
 
-Зайти в терминал внутри контейнер можно, выполнив команду:
+Зайти в терминал внутри контейнера можно, выполнив команду:
 
 ```
 docker-compose exec web bash
@@ -74,7 +74,7 @@ docker-compose exec web python manage.py createsuperuser
 
 [UlianaVo](https://github.com/UlianaVo) - категории (Category), жанры (Genre) и произведения (Title): модели, view и эндпойнты для них.
 
-[LasBazza](https://github.com/LasBazza) - система регистрации и аутентификации, управление пользователями (Auth и Users), права доступа, работа с токеном, система подтверждения e-mail.
+[LasBazza](https://github.com/LasBazza) - система регистрации и аутентификации, управление пользователями (Auth и Users), права доступа, работа с токеном, система подтверждения email.
 
 ## Статус workflow
 ![yamdb workflow](https://github.com/LasBazza/api_yamdb_project/actions/workflows/yamdb_workflow.yml/badge.svg)
